@@ -8,6 +8,11 @@ const accountSID = process.env.accountSID
 const authTocken = process.env.authTocken
 const client = require('twilio')(accountSID, authTocken)
 
+
+router.get('/', function(req, res, next) {
+  res.send("Rundown server")
+});
+
 router.post('/checkUserExist', function (req, res, next) {
   try {
     userHelper.checkUserExist(req.body.email, req.body.phone).then((resp) => {
