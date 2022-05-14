@@ -1,0 +1,14 @@
+@import '../../../ColourTheme/ColourTheme.scss' ;
+
+.AssessmentHeading{
+    margin-top: 15vh;
+    color: $primaryColour;
+    text-align: center;
+}
+.question{
+    margin-top: 10vh;
+    font-weight: 500;
+}
+.nextBtn{
+    float: right;
+}

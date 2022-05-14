@@ -1,0 +1,63 @@
+.MentorOutbox {
+  margin: 10vh auto;
+  background: rgba(196, 196, 196, 0.33);
+  border-radius: 13px;
+  width: 380px;
+}
+
+@media only screen and (max-width: 530px) {
+  .MentorOutbox {
+    width: 80%;
+  }
+}
+
+.MentorPhotoOuterDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.MentorPhoto {
+  width: 40%;
+  height: 40%;
+  margin-top: 4vh;
+  margin-left: 30%;
+  border-radius: 130px;
+}
+
+.videocallLogo {
+  width: 12%;
+  height: 12%;
+  margin-top: 3vh;
+  margin-left: 10%;
+  cursor: pointer;
+}
+
+.MentorNameDiv {
+  text-align: center;
+}
+
+.MentorName {
+  font-size: large;
+  margin-left: auto;
+}
+
+.MentorDetailsDiv {
+  margin-left: 12%;
+  width: 80%;
+}
+
+.MentorDetails {
+  font-size: smaller;
+}
+
+.FindMentorBtns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.FindMentorBtn {
+  width: 37%;
+}
+/*# sourceMappingURL=FindMentor.css.map */

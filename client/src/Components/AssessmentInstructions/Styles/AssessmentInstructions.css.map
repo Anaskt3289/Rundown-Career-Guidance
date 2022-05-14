@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,mBAAmB,CAAC;EAChB,UAAU,EAAE,IAAI;EAChB,KAAK,ECHQ,OAAO;CDIvB;;AAED,AAAA,mBAAmB,CAAC;EAChB,KAAK,ECPQ,OAAO;CDQvB;;AAED,AAAA,kBAAkB,CAAC;EACf,SAAS,EAAE,IAAI;EACf,YAAY,EAAE,GAAG;EACjB,UAAU,EAAE,CAAC;EACb,KAAK,ECdQ,OAAO;CDevB;;AAED,AAAA,WAAW,CAAC;EACR,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,IAAI;CACf",
+    "sources": [
+        "AssessmentInstructions.scss",
+        "../../../ColourTheme/ColourTheme.scss"
+    ],
+    "names": [],
+    "file": "AssessmentInstructions.css"
+}

@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,kBAAkB,CAAA;EACd,UAAU,EAAE,IAAI;EAChB,KAAK,ECHQ,OAAO;EDIpB,UAAU,EAAE,MAAM;CACrB;;AACD,AAAA,SAAS,CAAA;EACL,UAAU,EAAE,IAAI;EAChB,WAAW,EAAE,GAAG;CACnB;;AACD,AAAA,QAAQ,CAAA;EACJ,KAAK,EAAE,KAAK;CACf",
+    "sources": [
+        "Assessment.scss",
+        "../../../ColourTheme/ColourTheme.scss"
+    ],
+    "names": [],
+    "file": "Assessment.css"
+}

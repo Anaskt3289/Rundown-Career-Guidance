@@ -1,0 +1,37 @@
+@import '../../../ColourTheme/ColourTheme.scss';
+
+.signupOutbox {
+    text-align: center;
+}
+
+.signupHeading {
+    margin-top: 10vh;
+    font-size: 23px;
+}
+
+.multiTextboxSignup {
+    width: 80%;
+}
+
+@media only screen and (min-width: 768px) {
+    .multiTextboxSignup {
+        width: 90%;
+    }
+
+}
+
+.signupTextbox {
+    width: 80%;
+}
+
+.alreadyhaveAccount {
+    margin-bottom: 35px;
+}
+
+.errMsg {
+    color: $errMsg;
+}
+
+.LoginInSignup {
+    cursor: pointer;
+}

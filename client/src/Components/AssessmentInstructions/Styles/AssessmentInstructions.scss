@@ -1,0 +1,22 @@
+@import '../../../ColourTheme/ColourTheme.scss' ;
+
+.InstructionHeading {
+    margin-top: 10vh;
+    color: $primaryColour;
+}
+
+.InstructionTagline {
+    color: $primaryColour;
+}
+
+.instructionNumber {
+    font-size: 70px;
+    margin-right: 3vw;
+    margin-top: 0;
+    color: $primaryColour;
+}
+
+.GetStarted {
+    width: 180px;
+    height: 45px;
+}

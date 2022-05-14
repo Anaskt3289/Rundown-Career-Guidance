@@ -1,0 +1,15 @@
+.AssessmentHeading {
+  margin-top: 15vh;
+  color: #CC747F;
+  text-align: center;
+}
+
+.question {
+  margin-top: 10vh;
+  font-weight: 500;
+}
+
+.nextBtn {
+  float: right;
+}
+/*# sourceMappingURL=Assessment.css.map */

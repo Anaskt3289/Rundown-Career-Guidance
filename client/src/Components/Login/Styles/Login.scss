@@ -1,0 +1,48 @@
+@import '../../../ColourTheme/ColourTheme.scss';
+
+.registerMentor {
+    color: $primaryColour;
+    margin-left: auto;
+}
+
+.LoginOutbox {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-top: 25px;
+    margin-top: 10vh;
+}
+
+.loginHeading {
+    font-size: larger;
+}
+
+.loginTextbox {
+    width: 75%;
+}
+
+.loginBtn {
+    width: 35%;
+}
+
+
+.OR {
+    display: flex;
+}
+
+.lineOR {
+    color: $black;
+    width: 25%;
+}
+
+.OTPloginBtn {
+    width: 50%;
+}
+
+.SignupinLogin {
+    cursor: pointer;
+}
+
+.errMsg {
+    color: $errMsg;
+}
