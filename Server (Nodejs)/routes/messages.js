@@ -15,19 +15,4 @@ router.post('/addmessage', function (req, res, next) {
     }
 });
 
-router.post('/getMessages', function (req, res, next) {
-    try {
-        console.log(req.body);
-        console.log('hello');
-        messagesHelper.getMessages(req.body.conversationId).then((response) => {
-            console.log(response);
-            res.status(200).json(response)
-        }).catch((err) => {
-            res.status(400).json(err)
-        })
-    } catch (err) {
-        res.status(400).json(err)
-    }
-});
-
 module.exports = router;

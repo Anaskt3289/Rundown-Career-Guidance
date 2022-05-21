@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const messagesHelper = require('../Helper/MessagesHelper')
+const mentorHelper = require('../Helper/MentorHelper')
 
 
 router.post('/', function (req, res, next) {
@@ -16,13 +17,25 @@ router.post('/', function (req, res, next) {
         res.status(400).json(err)
     }
 });
-router.post('/getconversations', function (req, res, next) {
+router.post('/getconversations', async function (req, res, next) {
     try {
-        messagesHelper.getConversations(req.body.userId).then((response) => {
-            res.status(200).json(response)
-        }).catch((err) => {
-            res.status(400).json(err)
-        })
+        let mentorId
+        let conversation = await messagesHelper.getConversations(req.body.userId)
+        for (let Id of conversation.conversation) {
+            if (Id !== req.body.userId) {
+                mentorId = Id
+            }
+        }
+        let mentor = await mentorHelper.findMentor(mentorId)
+        console.log(conversation._id);
+        let messages = await messagesHelper.getMessages(conversation._id+"")
+        let response = {
+            conversationId : conversation._id,
+            mentor: mentor,
+            messages : messages
+        }
+        res.status(200).json(response)
+
     } catch (err) {
         res.status(400).json(err)
     }

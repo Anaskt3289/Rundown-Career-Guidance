@@ -2,14 +2,13 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
 }
 
 .leftBox {
   width: 23%;
   margin: 2%;
   margin-left: 4%;
-  min-height: 600px;
+  height: 600px;
   background: rgba(196, 196, 196, 0.33);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -19,7 +18,7 @@
 .rightBox {
   width: 62%;
   margin: 2%;
-  min-height: 600px;
+  height: 600px;
   background: rgba(196, 196, 196, 0.33);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -77,7 +76,6 @@
 
 .chatName {
   font-weight: 500;
-  font-size: 20px;
   margin-left: 8%;
 }
 
@@ -126,28 +124,46 @@
 
 .receivedMessages {
   width: 40%;
-  min-height: 20%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: rgba(112, 154, 236, 0.9);
-  margin-top: 3%;
-  margin-bottom: 3%;
+  margin-top: 5vh;
   border-radius: 39px;
-  margin-left: 2%;
+  margin-left: 3vh;
+  padding: 0.3%;
 }
 
 .ourMessages {
   width: 40%;
-  min-height: 20%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: rgba(112, 154, 236, 0.9);
-  margin-top: 3%;
-  margin-bottom: 3%;
+  margin-top: 5vh;
   border-radius: 39px;
   margin-left: auto;
   margin-right: 2%;
-  padding-top: 0.3%;
+  padding: 0.3%;
 }
 
 .messageText {
   margin: 7%;
   color: #FFFFFF;
+}
+
+.receivedMessageTime {
+  margin: 1vh;
+  margin-left: 6%;
+  font-size: 10px;
+  color: #515459;
+}
+
+.ourMessageTime {
+  margin: 1vh;
+  float: right;
+  margin-right: 6%;
+  font-size: 10px;
+  color: #515459;
 }
 /*# sourceMappingURL=Messages.css.map */

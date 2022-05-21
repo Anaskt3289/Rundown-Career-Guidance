@@ -4,29 +4,25 @@ const async = require('hbs/lib/async');
 
 module.exports = {
     addConversation:(userId ,mentorId)=>{
-        let conversation = {
-            user : userId,
-            mentor : mentorId
-        }
+        // let conversation = {
+        //     user : userId,
+        //     mentor : mentorId
+        // }
         return new Promise((resolve,reject)=>{
-            db.get().collection(collection.conversations).insertOne(conversation).then(()=>{
+            db.get().collection(collection.conversations).insertOne({conversation:[userId,mentorId]}).then(()=>{
                 resolve()
             })
         })
     },
     getConversations:(userId)=>{
         return new Promise(async(resolve , reject)=>{
-            let conversations = await db.get().collection(collection.conversations).findOne({userId:userId})
+            let conversations = await db.get().collection(collection.conversations).findOne({conversation:{$in:[userId]}})
             resolve(conversations)
         })
     },
     addmessage:(details)=>{
         return new Promise((resolve , reject)=>{
-            let message = {
-                ...details,
-                sendAt:new Date()
-            }
-            db.get().collection(collection.messages).insertOne(message).then(()=>{
+            db.get().collection(collection.messages).insertOne(details).then(()=>{
                 resolve()
             })
         })

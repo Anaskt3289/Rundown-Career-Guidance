@@ -9,7 +9,7 @@ const authTocken = process.env.authTocken
 const client = require('twilio')(accountSID, authTocken)
 
 
-router.get('/', function(req, res, next) {
+router.get('/', function (req, res, next) {
   res.send("Rundown server")
 });
 
@@ -28,13 +28,16 @@ router.post('/checkUserExist', function (req, res, next) {
             res.status(200).json({ msg: 'User verification success' })
           }).catch((err) => {
             console.log(err);
+            res.status(400).json(err)
           })
       }
     }).catch((err) => {
       console.log(err);
+      res.status(400).json(err)
     })
   } catch (err) {
     console.log(err);
+    res.status(400).json(err)
   }
 });
 
@@ -46,7 +49,7 @@ router.post('/login', function (req, res, next) {
     } else {
       userHelper.verifyUser(req.body).then((response) => {
         if (response.status) {
-          res.status(200).json({user:response.user})
+          res.status(200).json({ user: response.user })
         } else if (response.userBlocked) {
           res.status(400).json({ errMsg: 'This account is blocked' })
         } else {
