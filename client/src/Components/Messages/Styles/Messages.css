@@ -37,6 +37,9 @@
 .messagesrightTop {
   width: 100%;
   height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background: rgba(112, 154, 236, 0.9);
   border-radius: 10px;
 }
@@ -165,5 +168,11 @@
   margin-right: 6%;
   font-size: 10px;
   color: #515459;
+}
+
+.videoCallIcon {
+  height: 40px;
+  width: 50px;
+  margin-left: auto;
 }
 /*# sourceMappingURL=Messages.css.map */

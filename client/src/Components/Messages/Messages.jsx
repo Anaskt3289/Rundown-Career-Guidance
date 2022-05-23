@@ -44,7 +44,7 @@ function Messages() {
   }, [])
 
   useEffect(() => {
-    newMessage && setOldMessages(prev => [...prev, newMessage])
+    newMessage && newMessage.senderId !== user && setOldMessages(prev => [...prev, newMessage])
   }, [newMessage])
 
   useEffect(() => {
@@ -58,6 +58,8 @@ function Messages() {
       text: message,
       createdAt: Date.now()
     }
+    setOldMessages(prev => [...prev, messageObj])
+    setMessage('')
     socket.current.emit("sendMessage", {
       senderId: user,
       receiverId: mentor._id,
@@ -65,7 +67,7 @@ function Messages() {
     })
 
     Api.post('/messages/addmessage', messageObj).then(() => {
-      setMessage('')
+     
     }).catch((err) => {
       console.log(err);
     })
@@ -85,6 +87,7 @@ function Messages() {
         <div className='rightBox'>
           <div className='messagesrightTop'>
             {mentor ? <h4 className='messagesHeadingRight'>{mentor.firstName + " " + mentor.lastName}</h4> : ""}
+            <img src="\Images\icons8-video-call-50.png" alt=""  className='videoCallIcon' />
           </div>
           <div className='messageContents' ref={scrollRef}>
 
