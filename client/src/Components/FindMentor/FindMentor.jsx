@@ -7,8 +7,8 @@ function FindMentor() {
         <div>
             <div className='MentorOutbox'>
                 <div className='MentorPhotoOuterDiv'>
-                    <img src="\Images\0x0.jpg" alt="" className='MentorPhoto' />
-                    <img src="\Images\video-camera.png" alt="" className='videocallLogo' />
+                    <img src="\Images\mentorSample.jpg" alt="" className='MentorPhoto' />
+                    <img src="\Images\videoCall.png" alt="" className='videocallLogo' />
                 </div>
                 <div className='MentorNameDiv'>
                     <h5 className='MentorName'>William Henry Gates</h5>

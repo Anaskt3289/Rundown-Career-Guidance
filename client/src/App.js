@@ -10,6 +10,7 @@ import OtpLoginPage from './Pages/OtpLoginPage';
 import OtpVerificationPage from './Pages/OtpVerificationPage';
 import FindMentorPage from './Pages/FindMentorPage';
 import MessagesPage from './Pages/MessagesPage';
+import VideoCallPage from './Pages/VideoCallPage';
 import { useState } from 'react';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path='/assessment' element={<AssessmentPage />} />
           <Route path='/findMentor' element={<FindMentorPage />} />
           <Route path='/messages' element={<MessagesPage />} />
+          <Route path='/videoCall' element={<VideoCallPage />} />
 
 
         </Routes>

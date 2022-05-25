@@ -30,15 +30,15 @@ io.on("connection", (socket) => {
     })
 
     //send and get messages
-    socket.on("sendMessage", ({senderId, receiverId, text}) => {
+    socket.on("sendMessage", ({ senderId, receiverId, text }) => {
         const receiver = getUser(receiverId)
         const sender = getUser(senderId)
-        if(receiver){
-            io.to(receiver.socketId).emit('getMessage',{
+        if (receiver) {
+            io.to(receiver.socketId).emit('getMessage', {
                 senderId,
                 text
             })
-            io.to(sender.socketId).emit('getMessage',{
+            io.to(sender.socketId).emit('getMessage', {
                 senderId,
                 text
             })

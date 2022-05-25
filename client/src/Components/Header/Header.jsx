@@ -40,7 +40,7 @@ function Header() {
                         <Typography variant="h7" component="div" sx={{ flexGrow: 0.2 }} className='headertags'>
                             Be a Mentor
                         </Typography>
-                        <Typography variant="h7" component="div" sx={{ flexGrow: 0.2 }} className='headertags'>
+                        <Typography variant="h7" component="div" sx={{ flexGrow: 0.2 }} className='headertags' onClick={() => navigate('/messages')}>
                             Messages
                         </Typography>
 

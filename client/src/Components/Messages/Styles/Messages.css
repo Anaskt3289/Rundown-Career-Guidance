@@ -132,7 +132,7 @@
   height: fit-content;
   background-color: rgba(112, 154, 236, 0.9);
   margin-top: 5vh;
-  border-radius: 39px;
+  border-radius: 39px 39px 39px 0px;
   margin-left: 3vh;
   padding: 0.3%;
 }
@@ -144,7 +144,7 @@
   height: fit-content;
   background-color: rgba(112, 154, 236, 0.9);
   margin-top: 5vh;
-  border-radius: 39px;
+  border-radius: 39px 39px 0px 39px;
   margin-left: auto;
   margin-right: 2%;
   padding: 0.3%;
@@ -171,8 +171,10 @@
 }
 
 .videoCallIcon {
-  height: 40px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   margin-left: auto;
+  margin-right: 4%;
+  margin-top: 1.5%;
 }
 /*# sourceMappingURL=Messages.css.map */

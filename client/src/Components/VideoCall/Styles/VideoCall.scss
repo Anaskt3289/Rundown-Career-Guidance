@@ -1,0 +1,34 @@
+@import '../../../ColourTheme/ColourTheme.scss';
+
+.videoCallOuter {
+    background-color: $black;
+    width: 75%;
+    height: 80vh;
+    margin: 2.5% auto;
+    border-radius: 15px;
+    display: flex;
+}
+
+.disconnectBtn {
+    width: 60px;
+    height: 60px;
+    margin-top: 65vh;
+    margin-left: auto;
+}
+
+@media only screen and (min-width: 768px) {
+    .disconnectBtn {
+        margin-left: 47%;
+    }
+
+}
+
+.ourVideo{
+    width: 140px;
+    height: 25vh;
+    background-color: $white;
+    margin-top: 50vh;
+    margin-left: auto;
+    margin-right: 5%;
+    border-radius: 11px;
+}
