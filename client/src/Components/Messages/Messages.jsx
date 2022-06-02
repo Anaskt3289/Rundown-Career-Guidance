@@ -1,8 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
-import './Styles/Messages.css'
-import Api from '../../Api/Api'
 import { io } from 'socket.io-client'
 import { format } from 'timeago.js'
+import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+
+import Api from '../../Api/Api'
+import './Styles/Messages.css'
+import { setMentorId } from '../../Redux/MentorId/mentorIdSlice'
 
 function Messages() {
 
@@ -14,7 +18,10 @@ function Messages() {
   const [newMessage, setNewMessage] = useState(null)
   const socket = useRef()
   const scrollRef = useRef()
-  //  const messages = useGEtMessages()
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+  //  const messages = useGEtMessages() 
+
   useEffect(() => {
     socket.current = io("ws://localhost:8000")
     let rundownUser = JSON.parse(localStorage.getItem("RundownUser"))
@@ -67,10 +74,17 @@ function Messages() {
     })
 
     Api.post('/messages/addmessage', messageObj).then(() => {
-     
+
     }).catch((err) => {
       console.log(err);
     })
+  }
+
+  const videoCallMentor = () => {
+    dispatch(setMentorId({
+      mentorId: mentor._id
+    }))
+    navigate('/videoCall')
   }
   return (
     <div>
@@ -87,7 +101,7 @@ function Messages() {
         <div className='rightBox'>
           <div className='messagesrightTop'>
             {mentor ? <h4 className='messagesHeadingRight'>{mentor.firstName + " " + mentor.lastName}</h4> : ""}
-            <img src="\Images\icons8-video-call-50.png" alt=""  className='videoCallIcon' />
+            <img src="\Images\icons8-video-call-50.png" alt="" className='videoCallIcon' onClick={videoCallMentor} />
           </div>
           <div className='messageContents' ref={scrollRef}>
 

@@ -34,7 +34,7 @@ function Header() {
                         <Typography variant="h7" component="div" sx={{ flexGrow: 0.2 }} className='headertags' onClick={() => navigate('/assessmentInstruction')}>
                             Aptitude Test
                         </Typography>
-                        <Typography variant="h7" component="div" sx={{ flexGrow: 0.2 }} className='headertags'>
+                        <Typography variant="h7" component="div" sx={{ flexGrow: 0.2 }} className='headertags' onClick={() => navigate('/findMentor')}>
                             Find Your Mentor
                         </Typography>
                         <Typography variant="h7" component="div" sx={{ flexGrow: 0.2 }} className='headertags'>
